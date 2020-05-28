@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    font-family: "Noto sans KR", Helvetica, sans-serif;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    min-width: 765px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+#body{
+    width: 100%;
+}
+#left{
+    position: fixed;
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background: #F2CF1D;
+    box-shadow: 2px 2px 6px rgba(242, 207, 29, 0.4);
+    z-index: 100;
+    min-width: 155px;
+}
+#left h1{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    background: #F2CF1D;
+    padding: 60px 0;
+}
+#left h1 a{
+    color: #18298C;
+}
+#left > ul{
+    text-align: center;
+    margin-top: 50px;
+}
+#left > ul > li{
+    /* outline: 1px solid blue; */
+    line-height: 70px;
+}
+#left > ul > li > a{
+    font-size: 16px;
+    color: #18298C;
+    font-weight: bold;
+}
+#left .sub_menu{
+    height: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+#left .sub_menu > li{
+    line-height: 70px;
+    height: 70px;
+}
+#left .sub_menu > li a{
+    color: #18298C;
+}
+#left .sub_menu > li:hover{
+    background: rgb(216, 180, 3);
+}
+#left > ul > li{
+    transition: 0.4s;
+}
+#left > ul > li:hover{
+    background: #E6C005;
+}
+#left > ul > li:hover .sub_menu{
+    height: 210px;
+    background: #E6C005;
+}
+#right{
+    float: right;
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    box-sizing: border-box;
+    background: rgba(242, 159, 5, 0.1);
+    min-height: 100vh;
+}
+#right .typing-txt{
+    display: none;
+}
+#right .typing{
+    display: inline-block;
+    animation-name: cursor;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    font-size: 30px;
+    display: inline-block;
+    font-weight: bold;
+    color: #5B55E6;
+}
+@keyframes cursor{
+    0%{
+        border-right: 1px solid #fff
+    } 
+    50%{
+        border-right: 1px solid #000
+    } 
+    100%{
+        border-right: 1px solid #fff
+    }
+}
+#right > h1{
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 5px;
+}

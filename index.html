@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="body">
+        <div id="left">
+            <h1><a href="./index.html">Portfolio</a></h1>
+            <ul>
+                <li>
+                    <a href="./index.html">HOME</a>
+                <li>
+                    <a href="#">About</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Who am I</a></li>
+                        <li><a href="#">Info</a></li>
+                        <li><a href="#">Vision</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Work list</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Illustration</a></li>
+                        <li><a href="#">Photoshop</a></li>
+                        <li><a href="#">Web Design</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">SNS</a></li>
+                        <li><a href="#">E-Mail</a></li>
+                        <li><a href="#">Address</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="right">
+            <h2>Work list</h2>
+            <ul id="work_menu">
+                <li><a href="all">All</a></li>
+                <li><a href="illust">Illustration</a></li>
+                <li><a href="photo">Photoshop</a></li>
+                <li><a href="web">Web</a></li>
+            </ul>
+            <div class="row">
+                <div class="col">
+                    <a href="#" class="web"><img src="./img/web2.jpg" alt=""></a>
+                    <a href="#" class="illust"><img src="./img/illust3.jpg" alt=""></a>
+                    <a href="#" class="photo"><img src="./img/photo6.jpg" alt=""></a>
+                    <a href="#" class="web"><img src="./img/web3.jpg" alt=""></a>
+                    <a href="#" class="illust"><img src="./img/illust5.jpg" alt=""></a>
+                    <a href="#" class="photo"><img src="./img/photo7.jpg" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#" class="illust"><img src="./img/illust4.jpg" alt=""></a>
+                    <a href="#" class="photo"><img src="./img/photo8.jpg" alt=""></a>
+                    <a href="#" class="web"><img src="./img/web7.jpg" alt=""></a>
+                    <a href="#" class="photo"><img src="./img/photo3.jpg" alt=""></a>
+                    <a href="#" class="web"><img src="./img/web5.jpg" alt=""></a>
+                    <a href="#" class="illust"><img src="./img/illust1.jpg" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#" class="photo"><img src="./img/photo2.jpg" alt=""></a>
+                    <a href="#" class="web"><img src="./img/web1.jpg" alt=""></a>
+                    <a href="#" class="illust"><img src="./img/illust8.jpg" alt=""></a>
+                    <a href="#" class="illust"><img src="./img/illust2.jpg" alt=""></a>
+                    <a href="#" class="photo"><img src="./img/photo5.jpg" alt=""></a>
+                    <a href="#" class="web"><img src="./img/web6.jpg" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#" class="photo"><img src="./img/photo1.jpg" alt=""></a>
+                    <a href="#" class="illust"><img src="./img/illust7.jpg" alt=""></a>
+                    <a href="#" class="web"><img src="./img/web4.jpg" alt=""></a>
+                    <a href="#" class="web"><img src="./img/web8.jpg" alt=""></a>
+                    <a href="#" class="photo"><img src="./img/photo4.jpg" alt=""></a>
+                    <a href="#" class="illust"><img src="./img/illust6.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            $('#work_menu li a').on('click', function(){
+                var name = $(this).attr('href');
+                var time = 200;
+                console.log(name);
+                $('#work_menu li a').css('fontWeight', 'normal');
+                $('#work_menu li').css('background', 'none');
+
+                $(this).css('fontWeight', 'bold');
+                $(this).parent('li').css('background', '#E6C005');
+                if(name !== 'all'){
+                    $('.row .col a').hide(time);
+                    $('.row .col .' + name).show(time);
+                    $('#work_menu li a [name = ' + name + ']').css('fontWeight', 'bold');
+                }
+                else{
+                    $('.row .col a').show(time);
+                }
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
