@@ -58,12 +58,6 @@ $(function(){
             behavior: 'smooth'
         });
     });
-    $('.move_work').on('click', function(){
-        window.scrollTo({
-            top: 1700,
-            behavior: 'smooth'
-        });
-    });
     
     $(window).scroll(function(){
         var height = $(document).scrollTop();
@@ -77,6 +71,18 @@ $(function(){
             $(".circle:nth-child(1) svg circle:nth-child(2)").css('strokeDashoffset', '440')
             $(".circle:nth-child(2) svg circle:nth-child(2)").css('strokeDashoffset', '440')
             $(".circle:nth-child(3) svg circle:nth-child(2)").css('strokeDashoffset', '440')
+        }
+    });
+    $('a').on('click', function(event){
+        if(this.hash !== ""){
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
         }
     });
 });
