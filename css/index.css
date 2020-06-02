@@ -119,7 +119,7 @@ a{
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
-    background: rgba(242, 159, 5, 0.1);
+    /* background: rgba(242, 159, 5, 0.1); */
     min-height: 100vh;
 }
 #right .typing-txt{
@@ -254,11 +254,11 @@ a{
     position: relative;
     padding: 30px;
     box-sizing: border-box;
-    background: rgba(242, 159, 5, 0.1);
+    /* background: rgba(242, 159, 5, 0.1); */
     min-height: 100vh;
 }
 #work h2{
-    margin-top: 50px;
+    margin-top: 200px;
     font-size: 40px;
     color: #18298C;
 }
