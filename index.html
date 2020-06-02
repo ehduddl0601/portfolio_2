@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/38816b2aa5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="body">
         <div id="left">
             <h1><a href="./index.html">Portfolio</a></h1>
-            <ul>
+            <ul id="menu">
                 <li>
                     <a href="./index.html">HOME</a>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#" class="move_about">About</a>
                     <ul class="sub_menu">
                         <li><a href="#">Who am I</a></li>
                         <li><a href="#">Info</a></li>
@@ -24,9 +26,9 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Work list</a>
+                    <a href="#" class="move_work">Work list</a>
                     <ul class="sub_menu">
-                        <li><a href="#">Illustration</a></li>
+                        <li><a href="#">Illustrator</a></li>
                         <li><a href="#">Photoshop</a></li>
                         <li><a href="#">Web Design</a></li>
                     </ul>
@@ -40,52 +42,146 @@
                     </ul>
                 </li>
             </ul>
+            <ul id="sns">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
         </div>
         <div id="right">
+            <div class="typing-txt">
+                <ul>
+                    <li>a Web Designer</li>
+                    <li>a Web Publisher</li>
+                    <li>Do Yeong Kim</li>
+                </ul>
+            </div>
+            <div id="box">
+                <h1>I'm</h1>
+                <p class="typing"></p>
+            </div>
+            <div id="change">
+                <h1>About Me</h1>
+                <div id="photo">
+                    <a href="#" class="move_about"><img src="http://placeimg.com/300/300/people/1" alt=""></a>
+                </div>
+                <div id="info">
+                    <p class="name">김도영</p>
+                    <p class="age">26세</p>
+                    <p class="univ">디지털아트학과 졸업</p><br>
+                    <p class="info">반응형 웹디자인 교육과정을 이수하고<br>현재 웹디자인기능사 자격증을 준비하고 있습니다.</p>
+                </div>
+                <div id="skill">
+                    <div class="circle">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <h1>Illustrator</h1>
+                        <p>60</p>
+                    </div>
+                    <div class="circle">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <h1>Photoshop</h1>
+                        <p>70</p>
+                    </div>
+                    <div class="circle">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <h1>CSS & Java</h1>
+                        <p>75</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="work">
             <h2>Work list</h2>
             <ul id="work_menu">
                 <li><a href="all">All</a></li>
-                <li><a href="illust">Illustration</a></li>
+                <li><a href="illust">Illustrator</a></li>
                 <li><a href="photo">Photoshop</a></li>
                 <li><a href="web">Web</a></li>
             </ul>
             <div class="row">
                 <div class="col">
-                    <a href="#" class="web"><img src="./img/web2.jpg" alt=""></a>
-                    <a href="#" class="illust"><img src="./img/illust3.jpg" alt=""></a>
-                    <a href="#" class="photo"><img src="./img/photo6.jpg" alt=""></a>
-                    <a href="#" class="web"><img src="./img/web3.jpg" alt=""></a>
-                    <a href="#" class="illust"><img src="./img/illust5.jpg" alt=""></a>
-                    <a href="#" class="photo"><img src="./img/photo7.jpg" alt=""></a>
+                    <a href="./work_web_2.html" class="web"><img src="./img/web2.jpg" alt=""></a>
+                    <a href="./work_illust_3.html" class="illust"><img src="./img/illust3.jpg" alt=""></a>
+                    <a href="./work_photo_6.html" class="photo"><img src="./img/photo6.jpg" alt=""></a>
+                    <a href="./work_web_3.html" class="web"><img src="./img/web3.jpg" alt=""></a>
+                    <a href="./work_illust_5.html" class="illust"><img src="./img/illust5.jpg" alt=""></a>
+                    <a href="./work_photo_7.html" class="photo"><img src="./img/photo7.jpg" alt=""></a>
                 </div>
                 <div class="col">
-                    <a href="#" class="illust"><img src="./img/illust4.jpg" alt=""></a>
-                    <a href="#" class="photo"><img src="./img/photo8.jpg" alt=""></a>
-                    <a href="#" class="web"><img src="./img/web7.jpg" alt=""></a>
-                    <a href="#" class="photo"><img src="./img/photo3.jpg" alt=""></a>
-                    <a href="#" class="web"><img src="./img/web5.jpg" alt=""></a>
-                    <a href="#" class="illust"><img src="./img/illust1.jpg" alt=""></a>
+                    <a href="./work_illust_4.html" class="illust"><img src="./img/illust4.jpg" alt=""></a>
+                    <a href="./work_photo_8.html" class="photo"><img src="./img/photo8.jpg" alt=""></a>
+                    <a href="./work_web_7.html" class="web"><img src="./img/web7.jpg" alt=""></a>
+                    <a href="./work_photo_3.html" class="photo"><img src="./img/photo3.jpg" alt=""></a>
+                    <a href="./work_web_5.html" class="web"><img src="./img/web5.jpg" alt=""></a>
+                    <a href="./work_illust_1.html" class="illust"><img src="./img/illust1.jpg" alt=""></a>
                 </div>
                 <div class="col">
-                    <a href="#" class="photo"><img src="./img/photo2.jpg" alt=""></a>
-                    <a href="#" class="web"><img src="./img/web1.jpg" alt=""></a>
-                    <a href="#" class="illust"><img src="./img/illust8.jpg" alt=""></a>
-                    <a href="#" class="illust"><img src="./img/illust2.jpg" alt=""></a>
-                    <a href="#" class="photo"><img src="./img/photo5.jpg" alt=""></a>
-                    <a href="#" class="web"><img src="./img/web6.jpg" alt=""></a>
+                    <a href="./work_photo_2.html" class="photo"><img src="./img/photo2.jpg" alt=""></a>
+                    <a href="./work_web_1.html" class="web"><img src="./img/web1.jpg" alt=""></a>
+                    <a href="./work_illust_8.html" class="illust"><img src="./img/illust8.jpg" alt=""></a>
+                    <a href="./work_illust_2.html" class="illust"><img src="./img/illust2.jpg" alt=""></a>
+                    <a href="./work_photo_5.html" class="photo"><img src="./img/photo5.jpg" alt=""></a>
+                    <a href="./work_web_6.html" class="web"><img src="./img/web6.jpg" alt=""></a>
                 </div>
                 <div class="col">
-                    <a href="#" class="photo"><img src="./img/photo1.jpg" alt=""></a>
-                    <a href="#" class="illust"><img src="./img/illust7.jpg" alt=""></a>
-                    <a href="#" class="web"><img src="./img/web4.jpg" alt=""></a>
-                    <a href="#" class="web"><img src="./img/web8.jpg" alt=""></a>
-                    <a href="#" class="photo"><img src="./img/photo4.jpg" alt=""></a>
-                    <a href="#" class="illust"><img src="./img/illust6.jpg" alt=""></a>
+                    <a href="./work_photo_1.html" class="photo"><img src="./img/photo1.jpg" alt=""></a>
+                    <a href="./work_illust_7.html" class="illust"><img src="./img/illust7.jpg" alt=""></a>
+                    <a href="./work_web_4.html" class="web"><img src="./img/web4.jpg" alt=""></a>
+                    <a href="./work_web_8.html" class="web"><img src="./img/web8.jpg" alt=""></a>
+                    <a href="./work_photo_4.html" class="photo"><img src="./img/photo4.jpg" alt=""></a>
+                    <a href="./work_illust_6.html" class="illust"><img src="./img/illust6.jpg" alt=""></a>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $(function(){
+        var typingBool = false; 
+        var typingIdx=0; 
+        var liIndex = 0;
+        var liLength = $(".typing-txt > ul > li").length;
 
+        var typingTxt = $(".typing-txt>ul>li").eq(liIndex).text(); 
+        typingTxt = typingTxt.split(""); 
+        if(typingBool == false){
+        typingBool = true; 
+        var tyInt = setInterval(typing,100);
+        } 
+
+        function typing(){ 
+        if(typingIdx < typingTxt.length){ 
+        $(".typing").append(typingTxt[typingIdx]); 
+        typingIdx++; 
+        } else{
+        if(liIndex >= liLength - 1){
+        liIndex = 0;
+        }else{
+        liIndex++; 
+        }
+
+        typingIdx=0;
+        typingBool = false; 
+        typingTxt = $(".typing-txt > ul > li").eq(liIndex).text(); 
+
+        clearInterval(tyInt);
+        setTimeout(function(){
+        $(".typing").html('');
+        tyInt = setInterval(typing,100);
+        },1000);
+        } 
+        }  
+        });
+    </script>
     <script>
         $(function(){
             $('#work_menu li a').on('click', function(){
@@ -106,6 +202,33 @@
                     $('.row .col a').show(time);
                 }
                 return false;
+            });
+            $('.move_about').on('click', function(){
+                window.scrollTo({
+                    top: 470,
+                    behavior: 'smooth'
+                });
+            });
+            $('.move_work').on('click', function(){
+                window.scrollTo({
+                    top: 1520,
+                    behavior: 'smooth'
+                });
+            });
+            
+            $(window).scroll(function(){
+                var height = $(document).scrollTop();
+                console.log(height);
+                if(height > 400 && height < 1400){
+                    $(".circle:nth-child(1) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 60) / 100)');
+                    $(".circle:nth-child(2) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 70) / 100)');
+                    $(".circle:nth-child(3) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 75) / 100)');
+                }
+                else{
+                    $(".circle:nth-child(1) svg circle:nth-child(2)").css('strokeDashoffset', '440')
+                    $(".circle:nth-child(2) svg circle:nth-child(2)").css('strokeDashoffset', '440')
+                    $(".circle:nth-child(3) svg circle:nth-child(2)").css('strokeDashoffset', '440')
+                }
             });
         });
     </script>

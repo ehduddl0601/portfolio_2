@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    font-family: "Noto sans KR", Helvetica, sans-serif;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    min-width: 765px;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+#body{
+    width: 100%;
+}
+#left{
+    position: fixed;
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background: #F2CF1D;
+    /* box-shadow: 2px 2px 6px rgba(242, 207, 29, 0.4); */
+    z-index: 100;
+    min-width: 155px;
+}
+#left h1{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    background: #F2CF1D;
+    padding: 60px 0;
+}
+#left h1 a{
+    color: #18298C;
+}
+#menu{
+    text-align: center;
+}
+#menu > li{
+    /* outline: 1px solid blue; */
+    line-height: 70px;
+    /* border-top: 1px solid rgb(253, 235, 142);
+    border-bottom: 1px solid rgb(168, 142, 9); */
+}
+#menu > li:last-child{
+    border-bottom: none;
+}
+#menu > li > a{
+    font-size: 18px;
+    color: #18298C;
+    font-weight: bold;
+}
+#menu .sub_menu{
+    height: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+#menu .sub_menu > li{
+    line-height: 70px;
+    height: 70px;
+}
+#menu .sub_menu > li a{
+    color: #18298C;
+    font-weight: 18px;
+}
+#menu .sub_menu > li:hover{
+    background: rgb(216, 180, 3);
+}
+#menu > li{
+    transition: 0.4s;
+}
+#menu > li:hover{
+    background: #E6C005;
+}
+#menu > li:hover .sub_menu{
+    height: 210px;
+    background: #E6C005;
+}
+#sns{
+    width: 100%;
+    position: absolute;
+    bottom: 17px;
+}
+#sns li{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px 0;
+}
+#sns li:hover{
+    background: #fff;
+}
+#sns li a{
+    color: #333;
+}
+#sns li:first-child a:hover{
+    color: #4064ad;
+}
+#sns li:nth-child(2) a:hover{
+    color: #d72e71;
+}
+#sns li:nth-child(3) a:hover{
+    color: #00a7e7;
+}
+#right{
+    float: right;
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    background: rgba(242, 159, 5, 0.1);
+    min-height: 100vh;
+}
+#right .typing-txt{
+    display: none;
+}
+#right .typing{
+    height: 100px;
+    padding-left: 20px;
+    display: inline-block;
+    animation-name: cursor;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    font-size: 80px;
+    display: inline-block;
+    font-weight: bold;
+    color: #F2CF1D;
+}
+@keyframes cursor{
+    0%{
+        border-right: 1px solid #fff
+    } 
+    50%{
+        border-right: 1px solid #000
+    } 
+    100%{
+        border-right: 1px solid #fff
+    }
+}
+#right #box h1{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 150px;
+    margin-bottom: 10px;
+    padding: 0 30px;
+    letter-spacing: 2px;
+}
+#right #box{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+#right #change{
+    margin-top: 270px;
+    width: 100%;
+    height: 1000px;
+    padding: 30px;
+    position: relative;
+}
+#right #change > h1{
+    /* height: 100px; */
+    font-size: 40px;
+    color: #000;
+}
+#right #photo{
+    /* outline: 1px solid red; */
+    text-align: center;
+}
+#photo img{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+#info{
+    margin-top: 50px;
+    padding: 0 40px;
+}
+#info p{
+    font-size: 18px;
+    margin: 5px 0;
+}
+#info .name{
+    font-size: 24px;
+    font-weight: bold;
+}
+#info .info{
+    height: 50px;
+}
+#skill{
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+}
+.circle{
+    width: 33%;
+    float: left;
+}
+.circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgba(139, 91, 2, 0.1);
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+.circle svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: 1s;
+}
+.circle:nth-child(1) svg circle:nth-child(2){
+    /* stroke-dashoffset: calc(440 - (440 * 60) / 100); */
+    stroke: orange;
+}
+.circle:nth-child(2) svg circle:nth-child(2){
+    /* stroke-dashoffset: calc(440 - (440 * 70) / 100); */
+    stroke: skyblue;
+}
+.circle:nth-child(3) svg circle:nth-child(2){
+    /* stroke-dashoffset: calc(440 - (440 * 75) / 100); */
+    stroke: darkgray;
+}
+.circle h1{
+    margin-top: 10px;
+    font-size: 24px;
+}
+.circle p{
+    font-size: 28px;
+    font-weight: 500;
+}
+#work{
+    float: right;
+    width: 80%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    box-sizing: border-box;
+    background: rgba(242, 159, 5, 0.1);
+    min-height: 100vh;
+}
+#work h2{
+    margin-top: 50px;
+    font-size: 40px;
+    color: #18298C;
+}
+#work .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
+    clear: both;
+}
+#work #work_menu{
+    margin: 30px 0;
+}
+#work #work_menu > li{
+    display: inline-block;
+    width: 110px;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    text-align: center;
+}
+#work #work_menu li:first-child{
+    background: #E6C005;
+}
+#work #work_menu li:first-child a{
+    font-weight: bold;
+}
+#work #work_menu > li > a{
+    color: #18298C;
+}
+#work .col{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 15px;
+}
+#work .col img{
+    margin-top: 25px;
+    vertical-align: middle;
+    width: 100%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 1300px){
+    #work .col{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 900px){
+    #work .col{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
