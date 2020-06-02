@@ -120,7 +120,6 @@ a{
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
-    background: rgba(242, 159, 5, 0.1);
     min-height: 100vh;
     transition: 1s;
 }
