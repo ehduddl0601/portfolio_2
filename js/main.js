@@ -63,7 +63,7 @@ $(function(){
         var height = $(document).scrollTop();
         console.log(height);
         if(height > 400 && height < 1400){
-            $(".circle:nth-child(1) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 60) / 100)');
+            $(".circle:nth-child(1) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 65) / 100)');
             $(".circle:nth-child(2) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 70) / 100)');
             $(".circle:nth-child(3) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 75) / 100)');
         }
