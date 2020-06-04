@@ -8,7 +8,7 @@ body{
     font-family: "Noto sans KR", Helvetica, sans-serif;
     overflow-x: scroll;
     overflow-y: scroll;
-    min-width: 920px;
+    min-width: 765px;
     scroll-behavior: smooth;
 }
 ul{
@@ -22,54 +22,47 @@ a{
     width: 100%;
 }
 #left{
+    position: fixed;
     float: left;
-    width: 100%;
-    height: 100px;
+    width: 20%;
+    height: 100vh;
     background: #F2CF1D;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
     z-index: 100;
     min-width: 155px;
-    position: relative;
 }
 #left h1{
-    display: block;
-    width: 135px;
     font-family: 'Lobster', cursive;
-    text-align: left;
+    text-align: center;
     font-size: 40px;
-    line-height: 100px;
-    margin-left: 30px;
     font-weight: normal;
+    background: #F2CF1D;
+    padding: 60px 0;
 }
 #left h1 a{
     color: #18298C;
 }
 #menu{
     text-align: center;
-    position: absolute;
-    top: 20px;
-    left: 300px;
 }
 #menu > li{
     /* outline: 1px solid blue; */
     line-height: 70px;
-    float: left;
-    width: 150px;
     /* border-top: 1px solid rgb(253, 235, 142);
     border-bottom: 1px solid rgb(168, 142, 9); */
+}
+#menu > li:last-child{
+    border-bottom: none;
 }
 #menu > li > a{
     font-size: 18px;
     color: #18298C;
     font-weight: bold;
-    padding: 20px 0;
 }
 #menu .sub_menu{
     height: 0;
     overflow: hidden;
     transition: .4s;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
 }
 #menu .sub_menu > li{
     line-height: 70px;
@@ -78,25 +71,51 @@ a{
 #menu .sub_menu > li a{
     color: #18298C;
     font-weight: 18px;
-    padding: 20px 30px;
-    text-align: center;
 }
 #menu .sub_menu > li:hover{
-    background: #E6C005;
+    background: rgb(216, 180, 3);
 }
 #menu > li{
     transition: 0.4s;
 }
-/* #menu > li:hover{
+#menu > li:hover{
     background: #E6C005;
-} */
+}
 #menu > li:hover .sub_menu{
     height: 210px;
-    background: #F2CF1D;
+    background: #E6C005;
 }
+#sns{
+    width: 100%;
+    position: absolute;
+    bottom: 17px;
+}
+#sns li{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px 0;
+}
+#sns li:hover{
+    background: #fff;
+}
+#sns li a{
+    color: #333;
+}
+#sns li:first-child a:hover{
+    color: #4064ad;
+}
+#sns li:nth-child(2) a:hover{
+    color: #d72e71;
+}
+#sns li:nth-child(3) a:hover{
+    color: #00a7e7;
+}
+
 #right{
     float: right;
-    width: 100%;
+    width: 80%;
     text-align: center;
     overflow: hidden;
     position: relative;
