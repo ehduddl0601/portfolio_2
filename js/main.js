@@ -52,25 +52,21 @@ $(function(){
         }
         return false;
     });
-    $('.move_about').on('click', function(){
-        window.scrollTo({
-            top: 600,
-            behavior: 'smooth'
-        });
-    });
     
     $(window).scroll(function(){
         var height = $(document).scrollTop();
         console.log(height);
-        if(height > 400 && height < 1400){
+        if(height > 500 && height < 1500){
             $(".circle:nth-child(1) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 65) / 100)');
             $(".circle:nth-child(2) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 70) / 100)');
             $(".circle:nth-child(3) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 75) / 100)');
+            $(".circle:nth-child(4) svg circle:nth-child(2)").css('strokeDashoffset', 'calc(440 - (440 * 70) / 100)');
         }
         else{
             $(".circle:nth-child(1) svg circle:nth-child(2)").css('strokeDashoffset', '440')
             $(".circle:nth-child(2) svg circle:nth-child(2)").css('strokeDashoffset', '440')
             $(".circle:nth-child(3) svg circle:nth-child(2)").css('strokeDashoffset', '440')
+            $(".circle:nth-child(4) svg circle:nth-child(2)").css('strokeDashoffset', '440')
         }
     });
     $('a').on('click', function(event){
