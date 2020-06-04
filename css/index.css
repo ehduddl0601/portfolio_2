@@ -29,7 +29,6 @@ a{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
     z-index: 100;
     min-width: 155px;
-    transition: 0.5s;
 }
 #left h1{
     font-family: 'Lobster', cursive;
