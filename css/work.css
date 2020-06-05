@@ -85,6 +85,13 @@ a{
     height: 210px;
     background: #E6C005;
 }
+#btn{
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: #18298C;
+    display: none;
+}
 #sns{
     width: 100%;
     position: absolute;
@@ -168,8 +175,8 @@ a{
         /* outline: 2px solid red; */
         width: 100%;
         height: 110px;
-        min-width: 700px;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        min-width: 700px;
     }
     #left h1{
         text-align: left;
@@ -178,12 +185,18 @@ a{
     }
     #menu{
         position: absolute;
-        top: 20px;
+        width: 100%;
+        height: 70px;
+        top: 0;
         right: 0;
+        background: rgb(224, 192, 30);
+        transition: 0.5s;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        z-index: -1000;
     }
-    #menu li{
+    #menu > li{
         float: left;
-        width: 120px;
+        width: 25%;
     }
     #menu li a{
         font-size: 18px;
@@ -192,11 +205,25 @@ a{
         background: #F2CF1D;
     }
     #menu .sub_menu{
-        margin-top: 20px;
+        width: 100%;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    #menu .sub_menu > li{
+        width: 100%;
+        background: #F2CF1D;
+    }
+    #menu .sub_menu > li:hover{
+        background: rgb(224, 192, 30);
     }
     #menu .sub_menu > li > a{
         font-size: 15px;
+        padding: 10px 20px;
+    }
+    #btn{
+        display: block;
+        position: absolute;
+        top: 37px;
+        right: 30px;
     }
     #sns{
         display: none;
@@ -204,5 +231,8 @@ a{
     #right{
         width: 100%;
         margin-top: 100px;
+    }
+    #work{
+        width: 100%;
     }
 }
