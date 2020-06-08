@@ -241,6 +241,9 @@ a{
     #work{
         width: 100%;
     }
+    #work img{
+        width: 100%;
+    }
     #back{
         display: block;
         position: fixed;
