@@ -74,6 +74,12 @@ $(function(){
             $(".circle:nth-child(3) svg circle:nth-child(2)").css('strokeDashoffset', '440')
             $(".circle:nth-child(4) svg circle:nth-child(2)").css('strokeDashoffset', '440')
         }
+        if(height > 2200){
+            $('#back').css('right', '30px');
+        }
+        else{
+            $('#back').css('right', '-100px');
+        }
     });
     $('a').on('click', function(event){
         if(this.hash !== ""){
