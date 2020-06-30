@@ -131,6 +131,9 @@ a{
     margin-bottom: 150px;
     transition: 0.5s;
 }
+#back{
+    display: none;
+}
 #right .typing-txt{
     display: none;
 }
@@ -315,6 +318,12 @@ a{
     #work .col{
         flex: 50%;
         max-width: 50%;
+    }
+}
+@media screen and (max-width: 950px){
+    .circle{
+        width: 50%;
+        margin-bottom: 60px;
     }
 }
 @media screen and (max-width: 766px){
