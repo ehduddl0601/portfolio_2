@@ -188,20 +188,21 @@ a{
     margin-bottom: 30px;
 }
 #right #photo{
-    /* outline: 1px solid red; */
+/*     outline: 1px solid red; */
     text-align: center;
     padding-top: 20px;
 }
 #photo img{
     margin-bottom: 20px;
     border-radius: 50%;
+/*    border: 2.5px solid #333;*/
 }
 #info{
     margin-top: 50px;
     padding: 0 40px;
 }
 #info p{
-    font-size: 18px;
+    font-size: 20px;
     margin: 5px 0;
 }
 #info .name{
@@ -210,6 +211,11 @@ a{
 }
 #info .info{
     height: 50px;
+}
+#info .phone{
+    font-size: 18px;
+    color: #666;
+    user-select: text;
 }
 #skill{
     width: 100%;
